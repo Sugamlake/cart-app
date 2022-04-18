@@ -166,6 +166,11 @@ const Products = (props) => {
     return newTotal;
   };
   // TODO: implement the restockProducts function
+  // con el doFectch le pasamos como parámetro las url de las rutas de la Api, de los productos
+  // y el resultado se guarda en una constante, obteniendo el parámetro data
+  // por que si no te regresa un objeto ej: status 200  y te da muchos datos que no vas a usar para el proyecto
+  // ya que tienes esa constante mapeas ese objeto para poder destructurar y obtener cada atribute del ítem.atribute
+  // ya que lo tienes lo retornas.
   const restockProducts = (url) => {
     doFetch(url);
     const originalData = data.data;
